@@ -9,7 +9,10 @@ button.addEventListener('click', function(){
     for(let i = 0; i<6; i++){
         hexColor += hex[GetRandom()];
     }
-
+    
 
 
 });
+function GetRandom(){
+    return Math.floor(Math.random() * hex.length);
+}
