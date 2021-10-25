@@ -11,3 +11,6 @@ button.addEventListener('click', function(e){
 
 });
 
+function RandomNumber(){
+    return Math.random() * colors.length;
+}
