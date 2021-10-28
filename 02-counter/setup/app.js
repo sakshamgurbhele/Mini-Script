@@ -5,7 +5,7 @@ const value = document.querySelector("#value");
 
 btns.forEach(function (btn){
     btns.document.addEventListener("click", function (e){
-        const style = e.currentTarget.classList;
+        const styles = e.currentTarget.classList;
         if (styles.contains("decrease")) {
             count--;
           } else if (styles.contains("increase")) {
