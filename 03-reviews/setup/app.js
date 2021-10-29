@@ -47,6 +47,7 @@ const reviews = [
   },
   
 ];
+//import thing
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtns = document.querySelector(".next-btn");
 const randomBtns = document.querySelector(".random-btn");
@@ -58,11 +59,12 @@ const img = document.getElementById("person-img");
 
 let currentItem = 1;
 
-//load initial item
+// load initial item
 window.addEventListener("DOMContentLoaded", function () {
   showReview(currentItem);
 });
 
+//show function because we shall not call it for everybutton
 function showReview(person) {
   const item = reviews[person];
   job.textContent = item.job;
@@ -71,8 +73,8 @@ function showReview(person) {
   img.src = item.img;
 }
 
-prevBtn.addEventListener("click", function() {
-  
+//button clicks
+prevBtn.addEventListener("click", function() { 
   if(currentItem <= 0) {
     currentItem = reviews.length-1;
   }
@@ -91,7 +93,6 @@ randomBtns.addEventListener("click", function() {
   showReview(currentItem);
 });
 
-//checks
 
 
 
