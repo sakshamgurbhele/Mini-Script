@@ -40,7 +40,25 @@ const reviews = [
 const prevBtn = document.querySelectorAll("prev-btn");
 const nextBtns = document.querySelectorAll("next-btn");
 const randomBtns = document.querySelectorAll("random-btn");
-const review = document.querySelector("review");
+
+const info = document.querySelector("info");
 const author = document.querySelector("author");
 const job = document.querySelector("job");
 const img = document.querySelector("img");
+
+let currentItem = 0;
+
+//load initial item
+window.addEventListener("DOMContentLoaded", function () {
+  const item = reviews[currentItem];
+});
+
+prevBtn.AddEventListener("click", () => {
+  currentItem--;
+  if (currentItem < 0) {
+    currentItem = reviews.length - 1;
+  }
+  showReview(currentItem);
+});
+
+
