@@ -29,6 +29,15 @@ const reviews = [
   },
   {
     id: 4,
+    name: "Saksham Gurbhele",
+    job: "Software Developer",
+    img:
+      "https://avatars.githubusercontent.com/u/64558515?v=4",
+    text:
+      "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
+  },
+  {
+    id: 5,
     name: "bill anderson",
     job: "the boss",
     img:
@@ -36,6 +45,7 @@ const reviews = [
     text:
       "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
   },
+  
 ];
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtns = document.querySelector(".next-btn");
@@ -62,17 +72,18 @@ function showReview(person) {
 }
 
 prevBtn.addEventListener("click", function() {
-  if(currentItem < 0) {
-    currentItem = reviews.length - 1;
+  
+  if(currentItem <= 0) {
+    currentItem = reviews.length-1;
   }
   currentItem--;
   showReview(currentItem);
 });
 nextBtns.addEventListener("click", function() {
-  if(currentItem > reviews.length - 1) {
+  currentItem++;
+  if(currentItem >= reviews.length) {
     currentItem = 0;
   }
-  currentItem++;
   showReview(currentItem);
 });
 randomBtns.addEventListener("click", function() {
