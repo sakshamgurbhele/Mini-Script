@@ -96,3 +96,7 @@ function diplayMenuItems(menuItems) {
     </div>
   </article>`;
   }); 
+  displayMenu = displayMenu.join("");
+  // console.log(displayMenu);
+
+  sectionCenter.innerHTML = displayMenu;
