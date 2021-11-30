@@ -66,3 +66,10 @@ const startSlider = (type) => {
   last.classList.add('next')
   next.classList.add('active')
 }
+nextBtn.addEventListener('click', () => {
+    startSlider()
+  })
+  prevBtn.addEventListener('click', () => {
+    startSlider('prev')
+  })
+  
